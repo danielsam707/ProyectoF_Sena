@@ -32,13 +32,14 @@ class AccesoController
                 redirect("index.php");
             } else {
                 $_SESSION['error'] = "Email y/o contraseña incorrectas";
+                echo "redireccionando";
                 redirect("login.php");
             }
 
-            /*  if (is_valid_email($usu_email)) {
-                 $_SESSION['errorEmail'] = "Recuerde ingresar un correo valido";
-                 redirect("login.php");
-             } */
+           /*  if (is_valid_email($usu_email)) {
+                $_SESSION['errorEmail'] = "Recuerde ingresar un correo valido";
+                redirect("login.php");
+            } */
 
         } else {
             $_SESSION['errorEmpty'] = "Recuerde rellenar el formulario";

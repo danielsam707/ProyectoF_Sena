@@ -2,8 +2,7 @@
 
 $host = "localhost";
 $user = "root";
-$database = "adso643";
+$database = "ntrs_db";
 $pass = "";
 $port = "3306";
 
-?>

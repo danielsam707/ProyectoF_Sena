@@ -7,6 +7,7 @@ function redirect($url)
         . "</script>";
 }
 
+
 /* function dd($var){
     echo "<pre>";
     die(print_r($var));
@@ -14,6 +15,7 @@ function redirect($url)
 
 function getUrl($modulo, $controlador, $funcion, $parametros = false, $pagina = false)
 {
+
 
     if ($pagina == false) {
         $pagina = "index";
@@ -27,12 +29,12 @@ function getUrl($modulo, $controlador, $funcion, $parametros = false, $pagina = 
             $url .= "&$key=$value";
         }
     }
-
     return $url;
 }
 
 function resolve()
 {
+
     $modulo = ucwords($_GET["modulo"]);
     $controlador = ucwords($_GET["controlador"]);
     $funcion = $_GET["funcion"];
@@ -50,7 +52,7 @@ function resolve()
             echo "El controlador especificada no existe";
         }
     } else {
-        echo "El modulo especificado no existe";
+        echo "El modulo especificado no existe ";
     }
 }
 ?>
