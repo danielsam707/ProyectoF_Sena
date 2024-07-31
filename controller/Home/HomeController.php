@@ -4,8 +4,7 @@ class HomeController
 {
     public function index()
     {
-        include_once "../../view/Home/Home.php";
-
+        //include_once "../../view/Home/Home.php";
     }
 }
 
