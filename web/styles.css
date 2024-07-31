@@ -2,7 +2,7 @@
     height: 400px;
     width: 350px;
     margin: auto;
-    background: #f39c12;
+    background: #28eba0;
     position: relative;
     display: flex;
     justify-content: center;
@@ -18,7 +18,7 @@
     width: 170px;
     top: -75px;
     border-radius: 50%;
-    background: #60a3bc;
+    background: #28f584;
     padding: 10px;
     text-align: center;
 }
