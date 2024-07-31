@@ -1,57 +1,32 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Natural Sport</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Usuario
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item"
-                                href="<?php echo getUrl("Usuario", "Usuario", "getInsert"); ?>">Registrar</a></li>
-                        <li><a class="dropdown-item"
-                                href="<?php echo getUrl("Usuario", "Usuario", "consult"); ?>">Consultar</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Tareas
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item"
-                                href="<?php echo getUrl("Tareas", "Tareas", "getInsert"); ?>">Registrar</a></li>
-                        <li><a class="dropdown-item"
-                                href="<?php echo getUrl("Tareas", "Tareas", "consult"); ?>">Consultar</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <?php if (isset($_SESSION['nombre'])): ?>
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <?= $_SESSION['nombre'] ?>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="<?php echo getUrl("Acceso", "Acceso", "logout"); ?>">Cerrar
-                                    sesion</a></li>
+<!-- <body>
+    <!-- banner bg main start -->
+<div class="banner_bg_main">
+    <!-- header top section start -->
+    <div class="container">
+        <div class="header_section_top">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="custom_menu">
+                        <ul>
+                            <li><a href="#">Best Sellers</a></li>
+                            <li><a href="#">Gift Ideas</a></li>
+                            <li><a href="#">New Releases</a></li>
+                            <?php if (isset($_SESSION['nombre'])): ?>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPerfil" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <?= $_SESSION['nombre'] ?>
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownPerfil">
+                                        <li><a class="dropdown-item"
+                                                href="<?php echo getUrl('Acceso', 'Acceso', 'logout'); ?>">Cerrar sesión</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            <?php endif; ?>
                         </ul>
-                    </li>
-                </ul>
-            <?php endif; ?>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
