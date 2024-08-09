@@ -29,6 +29,13 @@ class MasterModel extends Connection{
         $contador = mysqli_fetch_row($respuesta);
         return $contador[0]+1;
     }
+
+    public function lastInsertId($table, $field){
+        $sql = "SELECT MAX($field) FROM $table";
+        $respuesta = $this->consultar($sql);
+        $contador = mysqli_fetch_row($respuesta);
+        return $contador[0];
+    }
 }
 
 ?>

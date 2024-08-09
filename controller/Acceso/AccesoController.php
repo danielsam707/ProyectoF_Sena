@@ -21,15 +21,14 @@ class AccesoController
 
 
 
-        if (!empty($usu_email) && !empty($usu_password)) {
+        // if (!empty($usu_email) && !empty($usu_password)) {
             if (mysqli_num_rows($usuarios) > 0) {
                 foreach ($usuarios as $usuario) {
                     $_SESSION['auth'] = "ok";
                     $_SESSION['nombre'] = $usuario["usu_nombre"];
-                    $_SESSION['apellido'] = $usuario["usu_apellido"];
                     $_SESSION['email'] = $usuario["usu_correo"];
                 }
-                redirect("index.php");
+                redirect(getUrl("Home", "Home", "Index"));
             } else {
                 $_SESSION['error'] = "Email y/o contraseña incorrectas";
                 redirect("login.php");
@@ -40,10 +39,10 @@ class AccesoController
                  redirect("login.php");
              } */
 
-        } else {
-            $_SESSION['errorEmpty'] = "Recuerde rellenar el formulario";
-            redirect("login.php");
-        }
+        // } else {
+        //     $_SESSION['errorEmpty'] = "Recuerde rellenar el formulario";
+        //     redirect("login.php");
+        // }
 
 
     }

@@ -1,28 +1,15 @@
-/* Coded with love by Mutiullah Samim */
-body,
-html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background: #60a3bc !important;
-}
-
 .user_card {
     height: 400px;
     width: 350px;
-    margin-top: auto;
-    margin-bottom: auto;
-    background: #f39c12;
+    margin: auto;
+    background: #28eba0;
     position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-
 }
 
 .brand_logo_container {
@@ -31,7 +18,7 @@ html {
     width: 170px;
     top: -75px;
     border-radius: 50%;
-    background: #60a3bc;
+    background: #28f584;
     padding: 10px;
     text-align: center;
 }
@@ -43,14 +30,13 @@ html {
     border: 2px solid white;
 }
 
-.form_container {
-    margin-top: 100px;
+.dropdown-menu {
+    background: #ffffff;
+    border: 1px solid #ddd;
 }
 
-.login_btn {
-    width: 100%;
-    background: #c0392b !important;
-    color: white !important;
+.dropdown-item {
+    color: #333;
 }
 
 .login_btn:focus {
@@ -62,20 +48,14 @@ html {
     padding: 0 2rem;
 }
 
-.input-group-text {
-    background: #c0392b !important;
-    color: white !important;
-    border: 0 !important;
-    border-radius: 0.25rem 0 0 0.25rem !important;
+.dropdown-item {
+    color: #333;
 }
 
-.input_user,
-.input_pass:focus {
-    box-shadow: none !important;
-    outline: 0px !important;
+.dropdown-item:hover {
+    background-color: #f8f9fa;
 }
 
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #c0392b !important;
+.dropdown-item:hover {
+    background-color: #f8f9fa;
 }
-
