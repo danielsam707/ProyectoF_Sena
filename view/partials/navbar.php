@@ -82,6 +82,21 @@
 					<i class="zmdi zmdi-favorite-outline"></i>
 				</a>
 			</div>
+
+			<?php if (isset($_SESSION['nombre'])): ?>
+				<ul class="navbar-nav">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPerfil" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							<?= $_SESSION['nombre'] ?>
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdownPerfil">
+							<li><a class="dropdown-item" href="<?php echo getUrl('Acceso', 'Acceso', 'logout'); ?>">Cerrar
+									sesión</a></li>
+						</ul>
+					</li>
+				</ul>
+			<?php endif; ?>
 		</nav>
 	</div>
 </div>
