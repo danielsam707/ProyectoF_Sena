@@ -83,20 +83,34 @@
 				</a>
 			</div>
 
-			<?php if (isset($_SESSION['nombre'])): ?>
-				<ul class="navbar-nav">
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPerfil" role="button"
-							data-bs-toggle="dropdown" aria-expanded="false">
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPerfil" role="button"
+						data-bs-toggle="dropdown" aria-expanded="false">
+						<?php if (isset($_SESSION['nombre'])): ?>
 							<?= $_SESSION['nombre'] ?>
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdownPerfil">
+						<?php else: ?>
+							Mi cuenta
+						<?php endif; ?>
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdownPerfil">
+						<?php if (isset($_SESSION['nombre'])): ?>
 							<li><a class="dropdown-item" href="<?php echo getUrl('Acceso', 'Acceso', 'logout'); ?>">Cerrar
 									sesión</a></li>
-						</ul>
-					</li>
-				</ul>
-			<?php endif; ?>
+						<?php else: ?>
+							<li><a class="dropdown-item"
+									href="<?php echo getUrl('Acceso', 'Acceso', 'login'); ?>">Ingresar</a>
+							</li>
+							<li><a class="dropdown-item"
+									href="<?php echo getUrl('Registro', 'Registro', 'RegistrarC'); ?>">Crear
+									cuenta</a>
+							</li>
+						<?php endif; ?>
+					</ul>
+				</li>
+			</ul>
+
 		</nav>
+
 	</div>
 </div>

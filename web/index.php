@@ -10,9 +10,9 @@ include_once "../view/partials/cart.php";
 if (isset($_GET["modulo"])) {
     resolve();
 }
-if (!isset($_SESSION['auth'])) {
+/* if (!isset($_SESSION['auth'])) {
     redirect("login.php");
-}
+} */
 echo "</div>";
 include_once "../view/partials/footer.php";
 include_once "../view/home/slider.php";
