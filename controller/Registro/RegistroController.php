@@ -13,13 +13,13 @@ class RegistroController {
         // Validaciones
         if (empty($nombre) || empty($email) || empty($password) || empty($repeatPassword)) {
             $_SESSION['errorEmpty'] = "Todos los campos son requeridos.";
-            redirect("registro.php"); 
+            redirect(getUrl("Registro", "Registro", "RegistrarC")); 
             return;
         }
         
         if ($password !== $repeatPassword) {
             $_SESSION['error'] = "Las contraseñas no coinciden.";
-            redirect("registro.php"); 
+            redirect(getUrl("Registro", "Registro", "RegistrarC"));
             return;
         }
         // dd($_POST);
@@ -29,10 +29,10 @@ class RegistroController {
         
         if ($resultado) {
             $_SESSION['success'] = "Registro exitoso. Puedes iniciar sesión.";
-            redirect("login.php"); // Redirige al login después del registro
+            redirect(getUrl("Acceso", "Acceso", "login")); // Redirige al login después del registro
         } else {
             $_SESSION['error'] = "Error al registrar el usuario. Inténtalo de nuevo.";
-            redirect("registro.php"); 
+            redirect(getUrl("Registro", "Registro", "RegistrarC")); 
         }
         
     }
