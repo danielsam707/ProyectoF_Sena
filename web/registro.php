@@ -49,13 +49,20 @@
 
                         <div class="mb-md-5 mt-md-4 pb-5">
                             <form action="<?php echo getUrl("Registro", "Registro", "RegistrarC", array("id"=>1)); ?>" method="POST">
-                                <!-- Título -->
+                           
+                            <!-- Título -->
                                 <h2 class="fw-bold mb-2 text-uppercase">Registrarse</h2>
 
                                 <!-- Nombre -->
                                 <div data-mdb-input-init class="form-outline mb-4">
                                     <label class="form-label" for="registerName">Nombre</label>
                                     <input type="text" id="registerName" name="nombre" class="form-control" required />
+                                </div>
+
+                                <!--Apellido-->
+                                <div data-mdb-input-init class="form-outline mb-4">
+                                    <label class="form-label" for="registroApellido">Apellido</label>
+                                    <input type="text" id="registroApellido" name="apellido" class="form-control" required />
                                 </div>
 
                                 <!-- Email -->

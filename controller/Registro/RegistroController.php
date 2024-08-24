@@ -6,12 +6,13 @@ class RegistroController {
     public function RegistrarC() {
         
         $nombre = $_POST["nombre"];
+        $apellido = $_POST["apellido"];
         $email = $_POST["email"];
         $password = $_POST["password"];
         $repeatPassword = $_POST["repeatPassword"];
         
         // Validaciones
-        if (empty($nombre) || empty($email) || empty($password) || empty($repeatPassword)) {
+        if (empty($nombre) ||  empty($apellido) || empty($email) || empty($password) || empty($repeatPassword)) {
             $_SESSION['errorEmpty'] = "Todos los campos son requeridos.";
             redirect(getUrl("Registro", "Registro", "RegistrarC")); 
             return;
@@ -25,7 +26,7 @@ class RegistroController {
         // dd($_POST);
         // Instancia del modelo y llamada al método de registro
         $modelo = new RegistroModel();
-        $resultado = $modelo->RegistrarC($nombre, $email, $password);
+        $resultado = $modelo->RegistrarC($nombre, $apellido,$email, $password);
         
         if ($resultado) {
             $_SESSION['success'] = "Registro exitoso. Puedes iniciar sesión.";

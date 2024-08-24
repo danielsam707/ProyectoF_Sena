@@ -296,7 +296,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 .header-v4 .wrap-menu-desktop {
-  background-color: #fff;
+  background-color: transparent;
 }
 
 
@@ -379,6 +379,9 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 .header-v3 .main-menu > li > a {
   color: #fff;
+}
+.header-v4 .main-menu > li > a{
+  color : black;
 }
 
 /*---------------------------------------------*/
@@ -3330,3 +3333,5 @@ input.num-product::-webkit-inner-spin-button {
   }
 
 }
+
+

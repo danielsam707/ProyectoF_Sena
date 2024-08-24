@@ -53,15 +53,24 @@
 					</li>
 
 					<li>
-						<a href="blog.html">Blog</a>
-					</li>
-
-					<li>
 						<a href="about.html">About</a>
 					</li>
 
 					<li>
 						<a href="contact.html">Contact</a>
+					</li>
+
+					<li>
+						<a href="#">Configuracion</a>
+						<ul class="sub-menu">
+							<li>
+								<a href="<?php echo getUrl("Configuracion","Usuario","registrarUsuario"); ?>">Gestion Usuarios</a>
+							</li>
+							<li>
+								<a href="">Gestion Productos</a>
+							</li>
+										
+						</ul>
 					</li>
 				</ul>
 			</div>

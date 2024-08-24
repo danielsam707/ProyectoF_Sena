@@ -90,7 +90,7 @@
                             <div>
                                 <p class="mb-0">¿No tienes una cuenta?
                                     <a href="registro.php" class="text-white-50 fw-bold">
-                                        Registrar
+                                        Registrarse
                                     </a>
                                 </p>
                             </div>
