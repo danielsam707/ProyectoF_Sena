@@ -5,7 +5,7 @@
                 <div class="col-md-8 col-lg-9 p-b-80">
                     <div class="p-r-45 p-r-0-lg">
                         <!-- item blog -->
-                        <form class="row g-3" id="registro" action="<?php echo getUrl("Configuracion", "Usuario", "registroUsuario"); ?>" method="POST">
+                        <form class="row g-3" id="registro" action="<?php echo getUrl("producto", "Usuario", "registroUsuario"); ?>" method="POST">
                             <div class="col-md-4">
                                 <label for="rol" class="form-label">Rol</label>
                                 <select class="form-select" id="rol" name="rol_id" required>
@@ -15,7 +15,7 @@
                                         <option value="<?= $rol['rol_id']; ?>"><?= $rol['rol_nombre']; ?></option>
                                     <?php endforeach; ?>
 
-
+ 
                                 </select>
                             </div>
                             <div class="col-md-4">

@@ -68,7 +68,7 @@ class UsuarioController
     public function obtenerRoles()
     {
         $obj = new UsuarioModel();
-        extract($_POST);
+       // extract($_POST);
 
         $sql = "SELECT rol_id, rol_nombre FROM rol";
         $ejecutar = $obj->consultar($sql);

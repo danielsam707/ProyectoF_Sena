@@ -67,7 +67,10 @@
 								<a href="<?php echo getUrl("Configuracion","Usuario","registrarUsuario"); ?>">Gestion Usuarios</a>
 							</li>
 							<li>
-								<a href="">Gestion Productos</a>
+								<a href="<?php echo getUrl("Configuracion","Producto","getInsert"); ?>">Gestion Productos</a>
+							</li>
+							<li>
+								<a href="<?php echo getUrl("Configuracion","Stock","getInsert"); ?>">Gestion Stock</a>
 							</li>
 										
 						</ul>
